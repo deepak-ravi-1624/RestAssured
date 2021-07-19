@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runnerfile" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-07-19T06:04:53" hostname="deepakravi-VirtualBox" time="14.772">
+  <properties/>
+  <testcase name="fetch the identity details of a customer by providing the  a valid email ID" classname="runnerfile" time="12.265"/>
+  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #1" classname="runnerfile" time="1.192"/>
+  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #2" classname="runnerfile" time="1.303">
+    <failure message="java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Scenario Outline: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method "get"                                             # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is "1" and "0"                                                        # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry234@mailinator.com
+identity/v1/identity/EMAIL/harry234@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
+  And the given test data is in  "1" and "4"                                                  # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
+  And the query parameter is passed "active=false"                                            # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+200
+[{"uid":"20000000000000264200","customer_contact_id":"44771234567","email":"harry234@mailinator.com","msisdn":"+447800901004","first_name":"John","last_name":"naik","msisdn_verified":true,"v3_partial_identity":false,"kba_status":"AVAILABLE","identity_category":"nc_bss","email_only":false,"has_password":true,"sqa_available":true,"email_verified":false,"demerged":false,"number_of_security_answer_digits":5,"former_customer":false,"security_question_anwser_set":true}]
+body[{"uid":"20000000000000264200","customer_contact_id":"44771234567","email":"harry234@mailinator.com","msisdn":"+447800901004","first_name":"John","last_name":"naik","msisdn_verified":true,"v3_partial_identity":false,"kba_status":"AVAILABLE","identity_category":"nc_bss","email_only":false,"has_password":true,"sqa_available":true,"email_verified":false,"demerged":false,"number_of_security_answer_digits":5,"former_customer":false,"security_question_anwser_set":true}]
+  Then execute the URL                                                                        # MyStepdefs.execute_the_url()
+  And I validate status code "200" and validate msisdn "+447800901004"                        # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:14
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method "get"                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is "2" and "0"                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry23@mailinator.com
+identity/v1/identity/EMAIL/harry23@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
+  And the given test data is in  "2" and "4"                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+  And the query parameter is passed "active=false"                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+404
+{"error_description":"identity does not exists.","error":"identity_not_found"}
+body{"error_description":"identity does not exists.","error":"identity_not_found"}
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+  And I validate status code "404"                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:22
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method "get"                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is "2" and "0"                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry23@mailinator.com
+identity/v1/identity/EMAIL/harry23@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
+  And the given test data is in  "2" and "4"                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+  And the query parameter is passed "active=false"                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+404
+{"error_description":"identity does not exists.","error":"identity_not_found"}
+body{"error_description":"identity does not exists.","error":"identity_not_found"}
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+  And I validate status code "405"                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+      java.lang.AssertionError: expected:<404> but was:<405>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at ✽.I validate status code "405"(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://reports.cucumber.io/docs/cucumber-jvm                 │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+]]></system-err>
+</testsuite>

@@ -1,0 +1,381 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-19T06:04:53.738Z",
+        "line": 5,
+        "name": "fetch the identity details of a customer by providing the  a valid email ID",
+        "description": "",
+        "id": "this-feature-is-to-fetch-the-identity-details-of-a-customer-by-providing-the-email-id-using-identity/v1/identity/email/{email)/details;fetch-the-identity-details-of-a-customer-by-providing-the--a-valid-email-id",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I want to execute service of method \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1750000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the relative url is \"1\" and \"0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"0\"",
+                  "offset": 28
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the given test data is in  \"1\" and \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"4\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the query parameter is passed \"active\u003dfalse\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"active\u003dfalse\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9620000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate status code \"200\" and validate msisdn \"+447800901004\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"+447800901004\"",
+                  "offset": 49
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T06:05:05.516Z",
+        "line": 14,
+        "name": "fetch the identity details of a customer by providing the  a invalid email ID",
+        "description": "",
+        "id": "this-feature-is-to-fetch-the-identity-details-of-a-customer-by-providing-the-email-id-using-identity/v1/identity/email/{email)/details;fetch-the-identity-details-of-a-customer-by-providing-the--a-invalid-email-id",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I want to execute service of method \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 119000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the relative url is \"2\" and \"0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"0\"",
+                  "offset": 28
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the given test data is in  \"2\" and \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"4\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the query parameter is passed \"active\u003dfalse\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"active\u003dfalse\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 917000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I validate status code \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"404\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-19T06:05:06.724Z",
+        "line": 22,
+        "name": "fetch the identity details of a customer by providing the  a invalid email ID",
+        "description": "",
+        "id": "this-feature-is-to-fetch-the-identity-details-of-a-customer-by-providing-the-email-id-using-identity/v1/identity/email/{email)/details;fetch-the-identity-details-of-a-customer-by-providing-the--a-invalid-email-id",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I want to execute service of method \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"get\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 175000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the relative url is \"2\" and \"0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"0\"",
+                  "offset": 28
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the given test data is in  \"2\" and \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"4\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the query parameter is passed \"active\u003dfalse\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"active\u003dfalse\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 918000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c405\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)\n\tat ✽.I validate status code \"405\"(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)\n",
+              "duration": 19000000,
+              "status": "failed"
+            },
+            "line": 28,
+            "name": "I validate status code \"405\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"405\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "This feature is to fetch the identity details of a customer by providing the email ID using identity/v1/identity/EMAIL/{email)/details",
+    "description": "",
+    "id": "this-feature-is-to-fetch-the-identity-details-of-a-customer-by-providing-the-email-id-using-identity/v1/identity/email/{email)/details",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/fetch_Info_By_Email.feature",
+    "tags": []
+  }
+]

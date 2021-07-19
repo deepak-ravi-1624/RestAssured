@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class runnerfile</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class runnerfile</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; runnerfile</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">14.760s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">66%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="fetch the identity details of a customer by providing the  a invalid email ID #2"></a>
+<h3 class="failures">fetch the identity details of a customer by providing the  a invalid email ID #2</h3>
+<span class="code">
+<pre>java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">fetch the identity details of a customer by providing the  a invalid email ID #1</td>
+<td class="success">1.192s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">fetch the identity details of a customer by providing the  a invalid email ID #2</td>
+<td class="failures">1.303s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">fetch the identity details of a customer by providing the  a valid email ID</td>
+<td class="success">12.265s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+Scenario Outline: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot;                                             # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;1&quot; and &quot;0&quot;                                                        # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry234@mailinator.com
+identity/v1/identity/EMAIL/harry234@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
+  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                                  # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                            # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+200
+[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+body[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+  Then execute the URL                                                                        # MyStepdefs.execute_the_url()
+  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901004&quot;                        # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:14
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot;                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;2&quot; and &quot;0&quot;                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry23@mailinator.com
+identity/v1/identity/EMAIL/harry23@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
+  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+404
+{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+  And I validate status code &quot;404&quot;                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:22
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot;                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;2&quot; and &quot;0&quot;                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+Test dataharry23@mailinator.com
+identity/v1/identity/EMAIL/harry23@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
+  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+404
+{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+  And I validate status code &quot;405&quot;                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+      java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://reports.cucumber.io/docs/cucumber-jvm                 │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.8</a> at 19 Jul, 2021 11:35:08 AM</p>
+</div>
+</div>
+</body>
+</html>

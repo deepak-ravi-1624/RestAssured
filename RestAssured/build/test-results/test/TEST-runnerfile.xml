@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runnerfile" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-07-19T06:04:53" hostname="deepakravi-VirtualBox" time="14.772">
+<testsuite name="runnerfile" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-07-19T11:40:47" hostname="deepakravi-VirtualBox" time="13.123">
   <properties/>
-  <testcase name="fetch the identity details of a customer by providing the  a valid email ID" classname="runnerfile" time="12.265"/>
-  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #1" classname="runnerfile" time="1.192"/>
-  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #2" classname="runnerfile" time="1.303">
+  <testcase name="fetch the identity details of a customer by providing the  a valid email ID" classname="runnerfile" time="10.717"/>
+  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #1" classname="runnerfile" time="1.163"/>
+  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #2" classname="runnerfile" time="1.231">
     <failure message="java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)

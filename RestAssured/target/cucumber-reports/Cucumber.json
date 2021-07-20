@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-07-19T06:04:53.738Z",
+        "start_timestamp": "2021-07-19T11:40:48.216Z",
         "line": 5,
         "name": "fetch the identity details of a customer by providing the  a valid email ID",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21000000,
+              "duration": 18000000,
               "status": "passed"
             },
             "line": 6,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1750000000,
+              "duration": 777000000,
               "status": "passed"
             },
             "line": 7,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 76000000,
+              "duration": 63000000,
               "status": "passed"
             },
             "line": 8,
@@ -75,7 +75,7 @@
           },
           {
             "result": {
-              "duration": 2000000,
+              "duration": 16000000,
               "status": "passed"
             },
             "line": 9,
@@ -93,7 +93,7 @@
           },
           {
             "result": {
-              "duration": 9620000000,
+              "duration": 9318000000,
               "status": "passed"
             },
             "line": 10,
@@ -105,7 +105,7 @@
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 4000000,
               "status": "passed"
             },
             "line": 11,
@@ -128,7 +128,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-19T06:05:05.516Z",
+        "start_timestamp": "2021-07-19T11:40:58.671Z",
         "line": 14,
         "name": "fetch the identity details of a customer by providing the  a invalid email ID",
         "description": "",
@@ -138,7 +138,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5000000,
+              "duration": 8000000,
               "status": "passed"
             },
             "line": 15,
@@ -156,7 +156,7 @@
           },
           {
             "result": {
-              "duration": 119000000,
+              "duration": 149000000,
               "status": "passed"
             },
             "line": 16,
@@ -178,7 +178,7 @@
           },
           {
             "result": {
-              "duration": 107000000,
+              "duration": 87000000,
               "status": "passed"
             },
             "line": 17,
@@ -200,7 +200,7 @@
           },
           {
             "result": {
-              "duration": 1000000,
+              "duration": 6000000,
               "status": "passed"
             },
             "line": 18,
@@ -218,7 +218,7 @@
           },
           {
             "result": {
-              "duration": 917000000,
+              "duration": 869000000,
               "status": "passed"
             },
             "line": 19,
@@ -249,7 +249,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-19T06:05:06.724Z",
+        "start_timestamp": "2021-07-19T11:40:59.855Z",
         "line": 22,
         "name": "fetch the identity details of a customer by providing the  a invalid email ID",
         "description": "",
@@ -259,7 +259,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2000000,
+              "duration": 16000000,
               "status": "passed"
             },
             "line": 23,
@@ -277,7 +277,7 @@
           },
           {
             "result": {
-              "duration": 175000000,
+              "duration": 81000000,
               "status": "passed"
             },
             "line": 24,
@@ -299,7 +299,7 @@
           },
           {
             "result": {
-              "duration": 73000000,
+              "duration": 121000000,
               "status": "passed"
             },
             "line": 25,
@@ -352,7 +352,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError: expected:\u003c404\u003e but was:\u003c405\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)\n\tat ✽.I validate status code \"405\"(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)\n",
-              "duration": 19000000,
+              "duration": 3000000,
               "status": "failed"
             },
             "line": 28,

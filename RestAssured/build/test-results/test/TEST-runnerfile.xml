@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runnerfile" tests="3" skipped="0" failures="1" errors="0" timestamp="2021-07-19T11:40:47" hostname="deepakravi-VirtualBox" time="13.123">
+<testsuite name="runnerfile" tests="4" skipped="0" failures="1" errors="0" timestamp="2021-07-20T07:56:53" hostname="deepakravi-VirtualBox" time="18.424">
   <properties/>
-  <testcase name="fetch the identity details of a customer by providing the  a valid email ID" classname="runnerfile" time="10.717"/>
-  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #1" classname="runnerfile" time="1.163"/>
-  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID #2" classname="runnerfile" time="1.231">
+  <testcase name="Messaging Platform to send OTAC success 1" classname="runnerfile" time="10.058"/>
+  <testcase name="fetch the identity details of a customer by providing the  a valid email ID" classname="runnerfile" time="6.257"/>
+  <testcase name="fetch the identity details of a customer by providing the  a invalid email ID for 404" classname="runnerfile" time="1.087"/>
+  <testcase name="Negative" classname="runnerfile" time="1.016">
     <failure message="java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
 	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
 </failure>
   </testcase>
   <system-out><![CDATA[
+Scenario Outline: Messaging Platform to send OTAC success 1                       # src/test/resources/features/MessagingPlatform.feature:5
+post
+the ip is https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method "post" and in environment "messaging" # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+messaging/v1/otac/email/issue
+  When the relative url is "messaging/v1/otac/email/issue"                        # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data{
+  "template": "Your otac {OTAC}",
+  "subject": "test",
+  "address": "idtest@mailinator.com",
+  "senderAddress": "idtest@mailinator.com"
+}
+  And the given test data is in  "1" and "5"                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the query parameter is passed "null"                                        # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+statuscodeid200
+final response{"email":"idtest@mailinator.com"}
+  Then execute the URL                                                            # MyStepdefs.execute_the_url()
+  And I validate status code "200" and validate msisdn "idtest@mailinator.com"    # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
 Scenario Outline: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
 get
 the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method "get"                                             # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+  Given I want to execute service of method "get" and in environment "ref_url"                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
 identity/v1/identity/EMAIL/{email}/details
-  When the relative url is "1" and "0"                                                        # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+  When the relative url is "identity/v1/identity/EMAIL/{email}/details"                       # MyStepdefs.the_relative_url_is(java.lang.String)
 Test dataharry234@mailinator.com
 identity/v1/identity/EMAIL/harry234@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
@@ -32,47 +53,47 @@ body[{"uid":"20000000000000264200","customer_contact_id":"44771234567","email":"
   Then execute the URL                                                                        # MyStepdefs.execute_the_url()
   And I validate status code "200" and validate msisdn "+447800901004"                        # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
 
-Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:14
+Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID for 404 # src/test/resources/features/fetch_Info_By_Email.feature:14
 get
 the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method "get"                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+  Given I want to execute service of method "get" and in environment "ref_url"                          # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
 identity/v1/identity/EMAIL/{email}/details
-  When the relative url is "2" and "0"                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+  When the relative url is "identity/v1/identity/EMAIL/{email}/details"                                 # MyStepdefs.the_relative_url_is(java.lang.String)
 Test dataharry23@mailinator.com
 identity/v1/identity/EMAIL/harry23@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
-  And the given test data is in  "2" and "4"                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+  And the given test data is in  "2" and "4"                                                            # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
 end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
-  And the query parameter is passed "active=false"                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the query parameter is passed "active=false"                                                      # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 404
 {"error_description":"identity does not exists.","error":"identity_not_found"}
 body{"error_description":"identity does not exists.","error":"identity_not_found"}
-  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
-  And I validate status code "404"                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+  Then execute the URL                                                                                  # MyStepdefs.execute_the_url()
+  And I validate status code "404"                                                                      # MyStepdefs.iValidateStatusCode(java.lang.String)
 
-Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID # src/test/resources/features/fetch_Info_By_Email.feature:22
+Scenario Outline: Negative                                                     # src/test/resources/features/fetch_Info_By_Email.feature:22
 get
 the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method "get"                                               # MyStepdefs.i_want_to_execute_service_of_method(java.lang.String)
+  Given I want to execute service of method "get" and in environment "ref_url" # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
 identity/v1/identity/EMAIL/{email}/details
-  When the relative url is "2" and "0"                                                          # MyStepdefs.theRelativeUrlIsAnd(java.lang.String,java.lang.String)
+  When the relative url is "identity/v1/identity/EMAIL/{email}/details"        # MyStepdefs.the_relative_url_is(java.lang.String)
 Test dataharry23@mailinator.com
 identity/v1/identity/EMAIL/harry23@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
-  And the given test data is in  "2" and "4"                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+  And the given test data is in  "2" and "4"                                   # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
 end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
-  And the query parameter is passed "active=false"                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the query parameter is passed "active=false"                             # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 404
 {"error_description":"identity does not exists.","error":"identity_not_found"}
 body{"error_description":"identity does not exists.","error":"identity_not_found"}
-  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
-  And I validate status code "405"                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+  Then execute the URL                                                         # MyStepdefs.execute_the_url()
+  And I validate status code "405"                                             # MyStepdefs.iValidateStatusCode(java.lang.String)
       java.lang.AssertionError: expected:<404> but was:<405>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:102)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
 	at ✽.I validate status code "405"(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
 
 ]]></system-out>

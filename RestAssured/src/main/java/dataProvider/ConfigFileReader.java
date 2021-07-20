@@ -25,8 +25,9 @@ public class ConfigFileReader {
             throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
         }
     }
-    public String getenvironmentUrl() {
-        String url = properties.getProperty("ref_url");
+    public String getenvironmentUrl(String arg1) {
+
+        String url = properties.getProperty(arg1);
         if(url != null) return url;
         else throw new RuntimeException("url not specified in the Configuration.properties file.");
     }

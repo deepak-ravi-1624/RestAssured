@@ -9,7 +9,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matcher.*;
-
+import static org.junit.Assert.assertTrue;
 
 
 public class MyStepdefs {
@@ -22,7 +22,7 @@ String validation;
 String Testdata;
 StringBuilder endpoint;
     ConfigFileReader configFileReader= new ConfigFileReader();
-String ip = configFileReader.getenvironmentUrl();
+String ip ;
     FileReafer readfromExcel = new FileReafer();
 general urlconstructor = new general();
 
@@ -45,9 +45,17 @@ System.out.println(method);
 
     @When("the query parameter is passed {string}")
     public void the_query_parameter_is_passed(String query) {
-        Query=query;
-        endurl=ip+endpoint+"?"+Query;
-        System.out.println("end urlis "+endurl);
+        if (query.equals("null")) {
+            endurl = ip + Url;
+            System.out.println("end urlis " + endurl);
+        }
+        else
+        {
+
+            Query = query;
+            endurl = ip + endpoint + "?" + Query;
+            System.out.println("end urlis " + endurl);
+        }
 
     }
     @When("the relative url is {string} and {string}")
@@ -63,9 +71,10 @@ System.out.println(method);
         int col =Integer.parseInt(arg1);
         Testdata=readfromExcel.fetchvalue(row,col);
         System.out.println("Test data" +Testdata);
-        endpoint= urlconstructor.constructURL(Url , Testdata);
-        System.out.println("endpoint"+endpoint);
-
+        if(Url.contains("{")) {
+            endpoint = urlconstructor.constructURL(Url, Testdata);
+            System.out.println("endpoint" + endpoint);
+        }
 
     }
 
@@ -82,12 +91,13 @@ System.out.println(method);
 
         }
 
-        else if(method.equalsIgnoreCase("put"))
+        else if(method.equalsIgnoreCase("post"))
         {
-            Response response = RestAssured.put(endurl);
-            System.out.println(response.getStatusCode());
+            Response response = RestAssured.given().contentType("application/json").header("apigw-authenticated-client","smoke").body(Testdata).post(endurl);
+            System.out.println("statuscodeid" +response.getStatusCode());
             responsecode = response.getStatusCode();
-            System.out.println(response.asString());
+            validation= response.getBody().asString();
+            System.out.println("final response"+response.asString());
 
         }
         else
@@ -105,12 +115,20 @@ System.out.println(method);
     @And("I validate status code {string} and validate msisdn {string}")
     public void iValidateStatusCodeAndValidateMsisdn(String status, String arg1) {
 String a=arg1;
+
         int i=Integer.parseInt(status);
         assertEquals(responsecode,i);
         assertTrue(validation.contains(a));
 
+
     }
 
 
-
+    @Given("I want to execute service of method {string} and in environment {string}")
+    public void iWantToExecuteServiceOfMethodAndInEnvironment(String arg0, String arg1) {
+        method=arg0;
+        ip=configFileReader.getenvironmentUrl(arg1);
+        System.out.println(method);
+        System.out.println("the ip is "+ip);
+    }
 }

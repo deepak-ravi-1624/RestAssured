@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">4</div>
+<div class="counter">6</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">18.418s</div>
+<div class="counter">21.174s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">75%</div>
+<div class="percent">50%</div>
 <p>successful</p>
 </div>
 </td>
@@ -76,8 +76,8 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Negative"></a>
-<h3 class="failures">Negative</h3>
+<a name="Email Negative"></a>
+<h3 class="failures">Email Negative</h3>
 <span class="code">
 <pre>java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
 	at org.junit.Assert.fail(Assert.java:89)
@@ -85,7 +85,33 @@
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
 	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
-	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:37)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Messaging Negative"></a>
+<h3 class="failures">Messaging Negative</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
+	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/MessagingPlatform.feature:21)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="fetch the identity details of a customer by providing the  a valid email ID #2"></a>
+<h3 class="failures">fetch the identity details of a customer by providing the  a valid email ID #2</h3>
+<span class="code">
+<pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
+	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:29)
 </pre>
 </span>
 </div>
@@ -101,24 +127,34 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Messaging Platform to send OTAC success 1</td>
-<td class="success">10.058s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">Negative</td>
-<td class="failures">1.016s</td>
+<td class="failures">Email Negative</td>
+<td class="failures">1.041s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">fetch the identity details of a customer by providing the  a invalid email ID for 404</td>
-<td class="success">1.087s</td>
+<td class="failures">Messaging Negative</td>
+<td class="failures">1.136s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Messaging Platform to send OTAC success 1</td>
+<td class="success">10.597s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">fetch the identity details of a customer by providing the  a valid email ID</td>
-<td class="success">6.257s</td>
+<td class="success">fetch the identity details of a customer by providing the  a invalid email ID for 404</td>
+<td class="success">1.090s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fetch the identity details of a customer by providing the  a valid email ID #1</td>
+<td class="success">6.302s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">fetch the identity details of a customer by providing the  a valid email ID #2</td>
+<td class="failures">1.008s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
@@ -126,7 +162,7 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-Scenario Outline: Messaging Platform to send OTAC success 1                       # src/test/resources/features/MessagingPlatform.feature:5
+Scenario: Messaging Platform to send OTAC success 1                               # src/test/resources/features/MessagingPlatform.feature:5
 post
 the ip is https://messaging.ref.o2.co.uk:443/
   Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
@@ -146,43 +182,95 @@ final response{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
   Then execute the URL                                                            # MyStepdefs.execute_the_url()
   And I validate status code &quot;200&quot; and validate msisdn &quot;idtest@mailinator.com&quot;    # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
 
-Scenario Outline: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
+Scenario: Messaging Negative                                                      # src/test/resources/features/MessagingPlatform.feature:14
+post
+the ip is https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+messaging/v1/otac/email/issue
+  When the relative url is &quot;messaging/v1/otac/email/issue&quot;                        # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data{
+  &quot;template&quot;: &quot;Your otac {OTAC}&quot;,
+  &quot;subject&quot;: &quot;test&quot;,
+  &quot;address&quot;: &quot;idtest@mailinator.com&quot;,
+  &quot;senderAddress&quot;: &quot;idtest@mailinator.com&quot;
+}
+  And the given test data is in  &quot;1&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the query parameter is passed &quot;null&quot;                                        # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+statuscodeid200
+final response{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+  Then execute the URL                                                            # MyStepdefs.execute_the_url()
+  And I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;                   # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+      java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
+	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/MessagingPlatform.feature:21)
+
+
+Scenario: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
 get
 the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
 identity/v1/identity/EMAIL/{email}/details
-  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                       # MyStepdefs.the_relative_url_is(java.lang.String)
+  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;               # MyStepdefs.the_relative_url_is(java.lang.String)
 Test dataharry234@mailinator.com
 identity/v1/identity/EMAIL/harry234@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
-  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                                  # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                          # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
 end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
-  And the query parameter is passed &quot;active=false&quot;                                            # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the query parameter is passed &quot;active=false&quot;                                    # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 200
 [{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
 body[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
-  Then execute the URL                                                                        # MyStepdefs.execute_the_url()
-  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901004&quot;                        # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+  Then execute the URL                                                                # MyStepdefs.execute_the_url()
+  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901004&quot;                # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
 
-Scenario Outline: fetch the identity details of a customer by providing the  a invalid email ID for 404 # src/test/resources/features/fetch_Info_By_Email.feature:14
+Scenario: fetch the identity details of a customer by providing the  a invalid email ID for 404 # src/test/resources/features/fetch_Info_By_Email.feature:15
 get
 the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                          # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                  # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
 identity/v1/identity/EMAIL/{email}/details
-  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                                 # MyStepdefs.the_relative_url_is(java.lang.String)
+  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                         # MyStepdefs.the_relative_url_is(java.lang.String)
 Test dataharry23@mailinator.com
 identity/v1/identity/EMAIL/harry23@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
-  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                            # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
 end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
-  And the query parameter is passed &quot;active=false&quot;                                                      # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the query parameter is passed &quot;active=false&quot;                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 404
 {&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
 body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
-  Then execute the URL                                                                                  # MyStepdefs.execute_the_url()
-  And I validate status code &quot;404&quot;                                                                      # MyStepdefs.iValidateStatusCode(java.lang.String)
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+  And I validate status code &quot;404&quot;                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
 
-Scenario Outline: Negative                                                     # src/test/resources/features/fetch_Info_By_Email.feature:22
+Scenario: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:23
+get
+the ip is https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;               # MyStepdefs.the_relative_url_is(java.lang.String)
+Test dataharry234@mailinator.com
+identity/v1/identity/EMAIL/harry234@mailinator.com/details
+endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
+  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                          # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                    # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+200
+[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+body[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+  Then execute the URL                                                                # MyStepdefs.execute_the_url()
+  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;                # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+      java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
+	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:29)
+
+
+Scenario: Email Negative                                                       # src/test/resources/features/fetch_Info_By_Email.feature:31
 get
 the ip is https://auth.ref.o2.co.uk/
   Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
@@ -205,7 +293,7 @@ body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;e
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
 	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
-	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:37)
 
 </pre>
 </span>
@@ -243,7 +331,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8</a> at 20 Jul, 2021 1:27:12 PM</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at 5 Aug, 2021 5:51:24 PM</p>
 </div>
 </div>
 </body>

@@ -7,6 +7,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+
+import java.util.Objects;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.Matcher.*;
 import static org.junit.Assert.assertTrue;
@@ -21,6 +24,12 @@ String endurl;
 String validation;
 String Testdata;
 StringBuilder endpoint;
+String arg3;
+String ip_legacy;
+String endurl_legacy;
+String validation_legacy;
+int responsecode_legacy;
+
     ConfigFileReader configFileReader= new ConfigFileReader();
 String ip ;
     FileReafer readfromExcel = new FileReafer();
@@ -47,14 +56,18 @@ System.out.println(method);
     public void the_query_parameter_is_passed(String query) {
         if (query.equals("null")) {
             endurl = ip + Url;
+            endurl_legacy = ip_legacy + Url;
             System.out.println("end urlis " + endurl);
+            System.out.println("end urlis " + endurl_legacy);
         }
         else
         {
 
             Query = query;
             endurl = ip + endpoint + "?" + Query;
+            endurl_legacy = ip_legacy + endpoint + "?" + Query;
             System.out.println("end urlis " + endurl);
+            System.out.println("end urlis " + endurl_legacy);
         }
 
     }
@@ -89,16 +102,33 @@ System.out.println(method);
             validation= response.getBody().asString();
             System.out.println("body"+validation);
 
+            Response response2 = RestAssured.get(endurl_legacy);
+            System.out.println(response2.getStatusCode());
+            responsecode_legacy = response2.getStatusCode();
+            System.out.println(response2.asString());
+            validation_legacy= response2.getBody().asString();
+            System.out.println("body"+validation);
+
         }
 
-        else if(method.equalsIgnoreCase("post"))
-        {
-            Response response = RestAssured.given().contentType("application/json").header("apigw-authenticated-client","smoke").body(Testdata).post(endurl);
-            System.out.println("statuscodeid" +response.getStatusCode());
+        else if(method.equalsIgnoreCase("post")) {
+            Response response = RestAssured.given().contentType("application/json").header("apigw-authenticated-client", "smoke").body(Testdata).post(endurl);
+            System.out.println("statuscodeid" + response.getStatusCode());
             responsecode = response.getStatusCode();
-            validation= response.getBody().asString();
-            System.out.println("final response"+response.asString());
+            validation = response.getBody().asString();
+            validation=validation + "hello";
+            System.out.println("final response" + response.asString());
 
+            Response response2 = RestAssured.given().contentType("application/json").header("apigw-authenticated-client", "smoke").body(Testdata).post(endurl_legacy);
+            System.out.println("statuscodeid" + response.getStatusCode());
+            responsecode_legacy = response2.getStatusCode();
+            validation_legacy = response2.getBody().asString();
+            System.out.println("final response" + response.asString());
+            if (Objects.equals(validation, validation_legacy)) {
+                System.out.println("matchimg");
+            } else {
+                System.out.println("mot matching ");
+            }
         }
         else
         {
@@ -127,7 +157,9 @@ String a=arg1;
     @Given("I want to execute service of method {string} and in environment {string}")
     public void iWantToExecuteServiceOfMethodAndInEnvironment(String arg0, String arg1) {
         method=arg0;
+        arg3= arg1+"_legacy";
         ip=configFileReader.getenvironmentUrl(arg1);
+        ip_legacy=configFileReader.getenvironmentUrl(arg3);
         System.out.println(method);
         System.out.println("the ip is "+ip);
     }

@@ -1,0 +1,1082 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-12T09:22:43.039Z",
+        "line": 4,
+        "name": "Test condition to create tinyURL for the particular target URL",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-create-tinyurl-for-the-particular-target-url",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1587000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the given test data is in  \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11633000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate status code \"200\" and validate response parameter \"http://google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"http://google.com\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-12T09:22:56.571Z",
+        "line": 13,
+        "name": "Test condition to verify the functionality of this API by passing Invalid duration.",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-verify-the-functionality-of-this-api-by-passing-invalid-duration.",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 179000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the given test data is in  \"3\" and \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"7\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1773000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I validate status code \"400\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"400\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-12T09:22:58.597Z",
+        "line": 24,
+        "name": "Test condition to retrieve details of tinyURL by passing Url_id",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-retrieve-details-of-tinyurl-by-passing-url-id",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168000000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the given test data is in  \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1794000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1638000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The required request parameters are \"url_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"url_id\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.theRequiredRequestParametersAre(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"get\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1780000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I validate status code \"200\" and validate response parameter \"http://google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"http://google.com\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-12T09:23:04.044Z",
+        "line": 38,
+        "name": "Test condition to Update tinyURL deatails for the particular urlId",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-update-tinyurl-deatails-for-the-particular-urlid",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 184000000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the given test data is in  \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1765000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 105000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "The required request parameters are \"url_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"url_id\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.theRequiredRequestParametersAre(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"post\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 99000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the given test data is in  \"3\" and \"6\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"6\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1939000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c200\u003e\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat MyStepdefs.iValidateStatusCode(MyStepdefs.java:176)\n\tat ✽.I validate status code \"200\"(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/Tiny.feature:49)\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "line": 49,
+            "name": "I validate status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"get\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "skipped"
+            },
+            "line": 52,
+            "name": "I validate status code \"200\" and validate response parameter \"http://google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"http://google.com\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-12T09:23:08.241Z",
+        "line": 55,
+        "name": "Test condition to delete the details tinyURL for the particular target URL",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-delete-the-details-tinyurl-for-the-particular-target-url",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the given test data is in  \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1766000000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 168000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "The required request parameters are \"url_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"url_id\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.theRequiredRequestParametersAre(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"delete\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"delete\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1901000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "I validate status code \"204\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"204\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-08-12T09:23:12.259Z",
+        "line": 68,
+        "name": "Test condition to delete tinyURL of  particular tinyURL id",
+        "description": "",
+        "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url;test-condition-to-delete-tinyurl-of--particular-tinyurl-id",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "I want to execute service of method \"put\" and in environment \"tinyurl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"put\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"tinyurl\"",
+                  "offset": 61
+                }
+              ],
+              "location": "MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "the relative url is \"tinyurl/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/\"",
+                  "offset": 20
+                }
+              ],
+              "location": "MyStepdefs.the_relative_url_is(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 186000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "the given test data is in  \"3\" and \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"5\"",
+                  "offset": 35
+                }
+              ],
+              "location": "MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "the query parameter is passed \"null\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"null\"",
+                  "offset": 30
+                }
+              ],
+              "location": "MyStepdefs.the_query_parameter_is_passed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1794000000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 81000000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "The required request parameters are \"url_id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"url_id\"",
+                  "offset": 36
+                }
+              ],
+              "location": "MyStepdefs.theRequiredRequestParametersAre(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"delete\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"delete\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1739000000,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "I validate status code \"204\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"204\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "the relative url is \"tinyurl/{url_id}\" and method is \"get\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"tinyurl/{url_id}\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"get\"",
+                  "offset": 53
+                }
+              ],
+              "location": "MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1750000000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "execute the URL",
+            "match": {
+              "location": "MyStepdefs.execute_the_url()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I validate status code \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"404\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyStepdefs.iValidateStatusCode(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "This feature is to create shortening URL and to fetch the tinyURL details for the Target URL",
+    "description": "",
+    "id": "this-feature-is-to-create-shortening-url-and-to-fetch-the-tinyurl-details-for-the-target-url",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Tiny.feature",
+    "tags": []
+  }
+]

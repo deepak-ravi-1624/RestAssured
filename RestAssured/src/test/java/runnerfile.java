@@ -1,5 +1,4 @@
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -7,14 +6,15 @@ import org.junit.runner.RunWith;
 import java.io.File;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
-        //plugin = { "pretty", "html:target/cucumber-reports.html" }
-        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json" },
-        monochrome = true
+        features = { "src/test/resources/features" },
 
-        /* plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-         monochrome = true*/
+        plugin = { "pretty", "html:target/cucumber-reports.html" },
+       //plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json" },
+
+         monochrome = true,
+        publish = true
 )
+
 public class  runnerfile
 {
     /*@AfterClass
@@ -22,4 +22,5 @@ public class  runnerfile
         Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
     }
      */
+
 }

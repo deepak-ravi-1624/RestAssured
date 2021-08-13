@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">6</div>
+<div class="counter">23</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">21.174s</div>
+<div class="counter">1m35.37s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="percent">86%</div>
 <p>successful</p>
 </div>
 </td>
@@ -76,42 +76,78 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="Email Negative"></a>
-<h3 class="failures">Email Negative</h3>
+<a name="Negative"></a>
+<h3 class="failures">Negative</h3>
 <span class="code">
 <pre>java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
-	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:37)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:176)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
 </pre>
 </span>
 </div>
 <div class="test">
-<a name="Messaging Negative"></a>
-<h3 class="failures">Messaging Negative</h3>
+<a name="Test condition to Update tinyURL details by passing invalid duration."></a>
+<h3 class="failures">Test condition to Update tinyURL details by passing invalid duration.</h3>
 <span class="code">
-<pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
-	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/MessagingPlatform.feature:21)
+<pre>java.lang.IllegalStateException: Cannot invoke the path method because no content-type was present in the response and no default parser has been set.
+
+You can specify a default parser using e.g.:
+RestAssured.defaultParser = Parser.JSON;
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy:406)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.findContentType(RestAssuredResponseOptionsGroovyImpl.groovy:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.path(RestAssuredResponseOptionsGroovyImpl.groovy:405)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.path(RestAssuredResponseOptionsImpl.java:230)
+	at MyStepdefs.theRequiredRequestParametersAre(MyStepdefs.java:245)
+	at ✽.The required request parameters are &quot;url_id&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/TinyURL/tinyURLpost.feature:27)
 </pre>
 </span>
 </div>
 <div class="test">
-<a name="fetch the identity details of a customer by providing the  a valid email ID #2"></a>
-<h3 class="failures">fetch the identity details of a customer by providing the  a valid email ID #2</h3>
+<a name="Test condition to create tinyURL for the particular target URL by passing Invalid duration."></a>
+<h3 class="failures">Test condition to create tinyURL for the particular target URL by passing Invalid duration.</h3>
 <span class="code">
-<pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
-	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:29)
+<pre>java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;200&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:176)
+	at ✽.I validate status code &quot;200&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/TinyURL/TinyUrlcreate.feature:20)
 </pre>
 </span>
 </div>
@@ -127,34 +163,119 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">Email Negative</td>
-<td class="failures">1.041s</td>
+<td class="failures">Negative</td>
+<td class="failures">1.841s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">Messaging Negative</td>
-<td class="failures">1.136s</td>
+<td class="failures">Test condition to Update tinyURL details by passing invalid duration.</td>
+<td class="failures">1.915s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">Messaging Platform to send OTAC success 1</td>
-<td class="success">10.597s</td>
+<td class="success">Test condition to Update tinyURL details for the particular urlId</td>
+<td class="success">5.421s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">fetch the identity details of a customer by providing the  a invalid email ID for 404</td>
-<td class="success">1.090s</td>
+<td class="success">Test condition to create tinyURL for the particular target URL</td>
+<td class="success">7.157s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">fetch the identity details of a customer by providing the  a valid email ID #1</td>
-<td class="success">6.302s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">fetch the identity details of a customer by providing the  a valid email ID #2</td>
-<td class="failures">1.008s</td>
+<td class="failures">Test condition to create tinyURL for the particular target URL by passing Invalid duration.</td>
+<td class="failures">1.901s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Test condition to delete tinyURL by passing not existed tinyURL id</td>
+<td class="success">5.436s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to delete tinyURL of  particular tinyURL id</td>
+<td class="success">5.059s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to redeem the OTAC for the given email.</td>
+<td class="success">3.894s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to redeem the OTAC for the given phone Number.</td>
+<td class="success">3.826s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to retrieve details of tinyURL by passing Url_id</td>
+<td class="success">3.656s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to retrieve the details of tinyURL by passing not existed UrlID.</td>
+<td class="success">5.528s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to verify functionality of api by passing invalid otac template .</td>
+<td class="success">1.986s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to verify functionality of api by passing invalid otac template .</td>
+<td class="success">2.057s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to verify functionality of the api by passing invalid template.</td>
+<td class="success">8.914s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to verify functionality of the api by passing invalid template.</td>
+<td class="success">3.826s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Test condition to verify the functionality of the api to send otac(one time auth code) is successful when valid phone number is passed in the request.</td>
+<td class="success">2.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">To verify the functionality of the api to send OTAC is successful when valid email is passed in the request.</td>
+<td class="success">2.169s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">To verify the functionality of the api to send message by passing invalid OTAC template</td>
+<td class="success">2.336s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">To verify the functionality of the api to send message by passing invalid OTAC template</td>
+<td class="success">2.078s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">To verify the functionality of the api to send message for given Phone number</td>
+<td class="success">2.192s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">To verify the functionality of the api to send message for given email</td>
+<td class="success">13.151s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fetch the identity details of a customer by providing the  a valid email ID</td>
+<td class="success">7.120s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fetch the identity details of a customer by providing the a invalid email ID for 404</td>
+<td class="success">1.882s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -162,129 +283,765 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-Scenario: Messaging Platform to send OTAC success 1                               # src/test/resources/features/MessagingPlatform.feature:5
+Scenario Outline: To verify the functionality of the api to send message for given email # src/test/resources/features/MessagingPlatform/v1_message_email.feature:5
 post
-the ip is https://messaging.ref.o2.co.uk:443/
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/message/email
+  When the relative url is &quot;messaging/v1/message/email&quot;                                  # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+    &quot;delivery&quot;: {
+        &quot;template&quot;: &quot;sms/priority.vm&quot;,
+        &quot;subject&quot;: &quot;identity test&quot;,
+        &quot;address&quot;: &quot;idtest153@o2.com&quot;,
+        &quot;senderAddress&quot;: &quot;idtest153@o2.com&quot;
+    },
+    &quot;tokens&quot;: {}
+}
+  And the given test data is in  &quot;5&quot; and &quot;5&quot;                                             # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/message/email
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/message/email
+  And the query parameter is passed &quot;null&quot;                                               # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;email&quot;:&quot;idtest153@o2.com&quot;}
+status code of Legacy200
+response body of Legacy{&quot;email&quot;:&quot;idtest153@o2.com&quot;}
+  Then execute the URL                                                                   # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;200&quot; and validate response parameter &quot;idtest153@o2.com&quot;    # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: To verify the functionality of the api to send message by passing invalid OTAC template # src/test/resources/features/MessagingPlatform/v1_message_email.feature:16
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/message/email
+  When the relative url is &quot;messaging/v1/message/email&quot;                                                   # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+    &quot;delivery&quot;: {
+        &quot;template&quot;: &quot;&quot;,
+        &quot;subject&quot;: &quot;identity test&quot;,
+        &quot;address&quot;: &quot;idtest153@o2.com&quot;,
+        &quot;senderAddress&quot;: &quot;idtest153@o2.com&quot;
+    },
+    &quot;tokens&quot;: {}
+}
+  And the given test data is in  &quot;5&quot; and &quot;7&quot;                                                              # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/message/email
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/message/email
+  And the query parameter is passed &quot;null&quot;                                                                # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;template must be supplied&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;template must be supplied&quot;}
+  Then execute the URL                                                                                    # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot; and validate response parameter &quot;template must be supplied&quot;            # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: To verify the functionality of the api to send message for given Phone number # src/test/resources/features/MessagingPlatform/v1_message_sms.feature:5
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;               # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/message/sms
+  When the relative url is &quot;messaging/v1/message/sms&quot;                                           # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;delivery&quot;: {
+    &quot;template&quot;: &quot;sms/priority.vm&quot;,
+    &quot;address&quot;: &quot;+447765432190&quot;,
+    &quot;otacSmsDelay&quot;: 0
+  },
+  &quot;tokens&quot;: {}
+}
+  And the given test data is in  &quot;6&quot; and &quot;5&quot;                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/message/sms
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/message/sms
+  And the query parameter is passed &quot;null&quot;                                                      # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;internationalFormat&quot;:&quot;+447765432190&quot;,&quot;msisdnFormat&quot;:&quot;447765432190&quot;,&quot;localFormat&quot;:&quot;07765432190&quot;}
+status code of Legacy200
+response body of Legacy{&quot;internationalFormat&quot;:&quot;+447765432190&quot;,&quot;msisdnFormat&quot;:&quot;447765432190&quot;,&quot;localFormat&quot;:&quot;07765432190&quot;}
+  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;200&quot; and validate response parameter &quot;447765432190&quot;               # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: To verify the functionality of the api to send message by passing invalid OTAC template # src/test/resources/features/MessagingPlatform/v1_message_sms.feature:16
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/message/sms
+  When the relative url is &quot;messaging/v1/message/sms&quot;                                                     # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;delivery&quot;: {
+    &quot;template&quot;: &quot;&quot;,
+    &quot;address&quot;: &quot;+447765432190&quot;,
+    &quot;otacSmsDelay&quot;: 0
+  },
+  &quot;tokens&quot;: {}
+}
+  And the given test data is in  &quot;6&quot; and &quot;7&quot;                                                              # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/message/sms
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/message/sms
+  And the query parameter is passed &quot;null&quot;                                                                # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;template must be supplied&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;template must be supplied&quot;}
+  Then execute the URL                                                                                    # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot; and validate response parameter &quot;template must be supplied&quot;            # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: To verify the functionality of the api to send OTAC is successful when valid email is passed in the request. # src/test/resources/features/MessagingPlatform/v1_otac_email_issue.feature:4
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                                              # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/email/issue
+  When the relative url is &quot;messaging/v1/otac/email/issue&quot;                                                                     # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;Your otac {OTAC}&quot;,
+  &quot;subject&quot;: &quot;test&quot;,
+  &quot;address&quot;: &quot;idtest@mailinator.com&quot;,
+  &quot;senderAddress&quot;: &quot;idtest@mailinator.com&quot;
+}
+  And the given test data is in  &quot;1&quot; and &quot;5&quot;                                                                                   # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the query parameter is passed &quot;null&quot;                                                                                     # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+status code of Legacy200
+response body of Legacy{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+  Then execute the URL                                                                                                         # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;200&quot; and validate response parameter &quot;idtest@mailinator.com&quot;                                     # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to verify functionality of api by passing invalid otac template .                               # src/test/resources/features/MessagingPlatform/v1_otac_email_issue.feature:14
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                                                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/email/issue
+  When the relative url is &quot;messaging/v1/otac/email/issue&quot;                                                                       # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;Your otac {OTC}&quot;,
+  &quot;subject&quot;: &quot;test&quot;,
+  &quot;address&quot;: &quot;idtest@mailinator.com&quot;,
+  &quot;senderAddress&quot;: &quot;idtest@mailinator.com&quot;
+}
+  And the given test data is in  &quot;1&quot; and &quot;7&quot;                                                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the query parameter is passed &quot;null&quot;                                                                                       # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;Invalid template format. Requires {OTAC} token in template.&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;Invalid template format. Requires {OTAC} token in template.&quot;}
+  Then execute the URL                                                                                                           # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot; and validate response parameter &quot;Invalid template format. Requires {OTAC} token in template.&quot; # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to verify the functionality of the api to send otac(one time auth code) is successful when valid phone number is passed in the request. # src/test/resources/features/MessagingPlatform/v1_otac_phone_issue.feature:5
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                                                                                        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/phone/issue
+  When the relative url is &quot;messaging/v1/otac/phone/issue&quot;                                                                                                               # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;{OTAC}&quot;,
+  &quot;address&quot;: &quot;447789654389&quot;,
+  &quot;otacSmsDelay&quot;: 0
+}
+  And the given test data is in  &quot;2&quot; and &quot;5&quot;                                                                                                                             # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+  And the query parameter is passed &quot;null&quot;                                                                                                                               # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;internationalFormat&quot;:&quot;+447789654389&quot;,&quot;msisdnFormat&quot;:&quot;447789654389&quot;,&quot;localFormat&quot;:&quot;07789654389&quot;}
+status code of Legacy200
+response body of Legacy{&quot;internationalFormat&quot;:&quot;+447789654389&quot;,&quot;msisdnFormat&quot;:&quot;447789654389&quot;,&quot;localFormat&quot;:&quot;07789654389&quot;}
+  Then execute the URL                                                                                                                                                   # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;200&quot; and validate response parameter &quot;447789654389&quot;                                                                                        # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to verify functionality of api by passing invalid otac template .                               # src/test/resources/features/MessagingPlatform/v1_otac_phone_issue.feature:16
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                                                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/phone/issue
+  When the relative url is &quot;messaging/v1/otac/phone/issue&quot;                                                                       # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;{OTC}&quot;,
+  &quot;address&quot;: &quot;447789654389&quot;,
+  &quot;otacSmsDelay&quot;: 0
+}
+  And the given test data is in  &quot;2&quot; and &quot;7&quot;                                                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+  And the query parameter is passed &quot;null&quot;                                                                                       # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;Invalid template format. Requires {OTAC} token in template.&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;validationError&quot;,&quot;errorDescription&quot;:&quot;Invalid template format. Requires {OTAC} token in template.&quot;}
+  Then execute the URL                                                                                                           # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot; and validate response parameter &quot;Invalid template format. Requires {OTAC} token in template.&quot; # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to redeem the OTAC for the given email.          # src/test/resources/features/MessagingPlatform/v2_otac_email_redeem.feature:4
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
   Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-messaging/v1/otac/email/issue
+The relative URL is messaging/v1/otac/email/issue
   When the relative url is &quot;messaging/v1/otac/email/issue&quot;                        # MyStepdefs.the_relative_url_is(java.lang.String)
-Test data{
+Test data {
   &quot;template&quot;: &quot;Your otac {OTAC}&quot;,
   &quot;subject&quot;: &quot;test&quot;,
   &quot;address&quot;: &quot;idtest@mailinator.com&quot;,
   &quot;senderAddress&quot;: &quot;idtest@mailinator.com&quot;
 }
   And the given test data is in  &quot;1&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
   And the query parameter is passed &quot;null&quot;                                        # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
-statuscodeid200
-final response{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+status code of Microservice200
+response body of Microservice{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+status code of Legacy200
+response body of Legacy{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
   Then execute the URL                                                            # MyStepdefs.execute_the_url()
-  And I validate status code &quot;200&quot; and validate msisdn &quot;idtest@mailinator.com&quot;    # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/email/redeem
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/email/redeem
+  And the relative url is &quot;messaging/v2/otac/email/redeem&quot; and method is &quot;post&quot;   # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+Test data {
+  &quot;otac&quot;: &quot;999999&quot;,
+  &quot;address&quot;: &quot;idtest@mailinator.com&quot;
+}
+  And the given test data is in  &quot;3&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+status code of Microservice204
+response body of Microservice
+status code of Legacy204
+response body of Legacy
+  And execute the URL                                                             # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;204&quot;                                                # MyStepdefs.iValidateStatusCode(java.lang.String)
 
-Scenario: Messaging Negative                                                      # src/test/resources/features/MessagingPlatform.feature:14
+Scenario Outline: Test condition to verify functionality of the api by passing invalid template. # src/test/resources/features/MessagingPlatform/v2_otac_email_redeem.feature:17
 post
-the ip is https://messaging.ref.o2.co.uk:443/
-  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-messaging/v1/otac/email/issue
-  When the relative url is &quot;messaging/v1/otac/email/issue&quot;                        # MyStepdefs.the_relative_url_is(java.lang.String)
-Test data{
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/email/issue
+  When the relative url is &quot;messaging/v1/otac/email/issue&quot;                                       # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
   &quot;template&quot;: &quot;Your otac {OTAC}&quot;,
   &quot;subject&quot;: &quot;test&quot;,
   &quot;address&quot;: &quot;idtest@mailinator.com&quot;,
   &quot;senderAddress&quot;: &quot;idtest@mailinator.com&quot;
 }
-  And the given test data is in  &quot;1&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the given test data is in  &quot;1&quot; and &quot;5&quot;                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/email/issue
+  And the query parameter is passed &quot;null&quot;                                                       # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;issueLimitExceeded&quot;,&quot;errorDescription&quot;:&quot;Issue limit exceeded for address 'idtest@mailinator.com'&quot;}
+  Then execute the URL                                                                           # MyStepdefs.execute_the_url()
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/email/redeem
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/email/redeem
+  And the relative url is &quot;messaging/v2/otac/email/redeem&quot; and method is &quot;post&quot;                  # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+Test data {
+  &quot;otac&quot;: &quot;99999&quot;,
+  &quot;address&quot;: &quot;idtest@mailinator.com&quot;
+}
+  And the given test data is in  &quot;3&quot; and &quot;7&quot;                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;invalidOtac&quot;,&quot;errorDescription&quot;:&quot;The OTAC supplied is invalid&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;invalidOtac&quot;,&quot;errorDescription&quot;:&quot;The OTAC supplied is invalid&quot;}
+  And execute the URL                                                                            # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot;                                                               # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to redeem the OTAC for the given phone Number.   # src/test/resources/features/MessagingPlatform/v2_otac_phone_redeem.feature:5
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/phone/issue
+  When the relative url is &quot;messaging/v1/otac/phone/issue&quot;                        # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;{OTAC}&quot;,
+  &quot;address&quot;: &quot;447789654389&quot;,
+  &quot;otacSmsDelay&quot;: 0
+}
+  And the given test data is in  &quot;2&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
   And the query parameter is passed &quot;null&quot;                                        # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
-statuscodeid200
-final response{&quot;email&quot;:&quot;idtest@mailinator.com&quot;}
+status code of Microservice200
+response body of Microservice{&quot;internationalFormat&quot;:&quot;+447789654389&quot;,&quot;msisdnFormat&quot;:&quot;447789654389&quot;,&quot;localFormat&quot;:&quot;07789654389&quot;}
+status code of Legacy200
+response body of Legacy{&quot;internationalFormat&quot;:&quot;+447789654389&quot;,&quot;msisdnFormat&quot;:&quot;447789654389&quot;,&quot;localFormat&quot;:&quot;07789654389&quot;}
   Then execute the URL                                                            # MyStepdefs.execute_the_url()
-  And I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;                   # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
-      java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
-	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;id.com&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/MessagingPlatform.feature:21)
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/phone/redeem
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/phone/redeem
+  And the relative url is &quot;messaging/v2/otac/phone/redeem&quot; and method is &quot;post&quot;   # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+Test data {
+  &quot;otac&quot;: &quot;999999&quot;,
+  &quot;address&quot;: {
+    &quot;msisdn&quot;: &quot;447789654389&quot;
+  }
+}
+  And the given test data is in  &quot;4&quot; and &quot;5&quot;                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+status code of Microservice204
+response body of Microservice
+status code of Legacy204
+response body of Legacy
+  And execute the URL                                                             # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;204&quot;                                                # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to verify functionality of the api by passing invalid template. # src/test/resources/features/MessagingPlatform/v2_otac_phone_redeem.feature:19
+post
+the ip for Microservices https://messaging.ref.o2.co.uk:443/
+the ip for Legacy https://messaging.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;post&quot; and in environment &quot;messaging&quot;                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is messaging/v1/otac/phone/issue
+  When the relative url is &quot;messaging/v1/otac/phone/issue&quot;                                       # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+  &quot;template&quot;: &quot;{OTAC}&quot;,
+  &quot;address&quot;: &quot;447789654389&quot;,
+  &quot;otacSmsDelay&quot;: 0
+}
+  And the given test data is in  &quot;2&quot; and &quot;5&quot;                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+end url for legacy is https://messaging.ref.o2.co.uk:443/messaging/v1/otac/phone/issue
+  And the query parameter is passed &quot;null&quot;                                                       # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;internationalFormat&quot;:&quot;+447789654389&quot;,&quot;msisdnFormat&quot;:&quot;447789654389&quot;,&quot;localFormat&quot;:&quot;07789654389&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;issueLimitExceeded&quot;,&quot;errorDescription&quot;:&quot;Issue limit exceeded for address '447789654389'&quot;}
+  Then execute the URL                                                                           # MyStepdefs.execute_the_url()
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/phone/redeem
+https://messaging.ref.o2.co.uk:443/messaging/v2/otac/phone/redeem
+  And the relative url is &quot;messaging/v2/otac/phone/redeem&quot; and method is &quot;post&quot;                  # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+Test data {
+  &quot;otac&quot;: &quot;99999&quot;,
+  &quot;address&quot;: {
+    &quot;msisdn&quot;: &quot;447789654389&quot;
+  }
+}
+  And the given test data is in  &quot;4&quot; and &quot;7&quot;                                                     # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error&quot;:&quot;invalidOtac&quot;,&quot;errorDescription&quot;:&quot;The OTAC supplied is invalid&quot;}
+status code of Legacy400
+response body of Legacy{&quot;error&quot;:&quot;invalidOtac&quot;,&quot;errorDescription&quot;:&quot;The OTAC supplied is invalid&quot;}
+  And execute the URL                                                                            # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;400&quot;                                                               # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to create tinyURL for the particular target URL       # src/test/resources/features/TinyURL/TinyUrlcreate.feature:4
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                  # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                           # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                             # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;vctfh6ybkh&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/vctfh6ybkh&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:11Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;iwg5leg4xr&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/iwg5leg4xr&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:12Z&quot;}
+  Then execute the URL                                                                 # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;200&quot; and validate response parameter &quot;http://google.com&quot; # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to create tinyURL for the particular target URL by passing Invalid duration. # src/test/resources/features/TinyURL/TinyUrlcreate.feature:13
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;                                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                                         # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;P1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;7&quot;                                                                  # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                                                    # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice400
+response body of Microservice{&quot;error_code&quot;:&quot;validation_error&quot;,&quot;error_description&quot;:&quot;missing or invalid duration&quot;}
+status code of Legacy400
+response body of legacy{&quot;error_code&quot;:&quot;validation_error&quot;,&quot;error_description&quot;:&quot;missing or invalid duration&quot;}
+  Then execute the URL                                                                                        # MyStepdefs.execute_the_url()
+  And I validate status code &quot;200&quot;                                                                            # MyStepdefs.iValidateStatusCode(java.lang.String)
+      java.lang.AssertionError: expected:&lt;400&gt; but was:&lt;200&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:176)
+	at ✽.I validate status code &quot;200&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/TinyURL/TinyUrlcreate.feature:20)
 
 
-Scenario: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
+Scenario Outline: Test condition to delete tinyURL of  particular tinyURL id   # src/test/resources/features/TinyURL/tinyURLdeleteapi.feature:5
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                          # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                   # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                     # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;zhe0uukyer&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/zhe0uukyer&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:15Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;obfbqxpimz&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/obfbqxpimz&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:15Z&quot;}
+  Then execute the URL                                                         # MyStepdefs.execute_the_url()
+zhe0uukyer
+obfbqxpimz
+  And The required request parameters are &quot;url_id&quot;                             # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+tinyurl/zhe0uukyer
+tinyurl/obfbqxpimz
+https://tinyurl.ref.o2.co.uk:443/tinyurl/zhe0uukyer
+https://tinyurl.ref.o2.co.uk:443/tinyurl/obfbqxpimz
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;delete&quot;            # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+status code of microservice is204
+status code of legacy is 204
+  And execute the URL                                                          # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;204&quot;                                             # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to delete tinyURL by passing not existed tinyURL id # src/test/resources/features/TinyURL/tinyURLdeleteapi.feature:19
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;       # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                         # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                           # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;wrqbxkihx6&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/wrqbxkihx6&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:20Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;vranzzhnfs&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/vranzzhnfs&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:20Z&quot;}
+  Then execute the URL                                                               # MyStepdefs.execute_the_url()
+wrqbxkihx6
+vranzzhnfs
+  And The required request parameters are &quot;url_id&quot;                                   # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+tinyurl/wrqbxkihx6
+tinyurl/vranzzhnfs
+https://tinyurl.ref.o2.co.uk:443/tinyurl/wrqbxkihx6
+https://tinyurl.ref.o2.co.uk:443/tinyurl/vranzzhnfs
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;delete&quot;                  # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+status code of microservice is204
+status code of legacy is 204
+  And execute the URL                                                                # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;204&quot;                                                   # MyStepdefs.iValidateStatusCode(java.lang.String)
+tinyurl/wrqbxkihx6
+tinyurl/vranzzhnfs
+https://tinyurl.ref.o2.co.uk:443/tinyurl/wrqbxkihx6
+https://tinyurl.ref.o2.co.uk:443/tinyurl/vranzzhnfs
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;delete&quot;                  # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+status code of microservice is404
+status code of legacy is 404
+  And execute the URL                                                                # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;404&quot;                                                   # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to retrieve details of tinyURL by passing Url_id      # src/test/resources/features/TinyURL/tinyURLgetapi.feature:3
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                  # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                           # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                             # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;zb6mir8gui&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/zb6mir8gui&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:25Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;fheoltmovy&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/fheoltmovy&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:26Z&quot;}
+  Then execute the URL                                                                 # MyStepdefs.execute_the_url()
+zb6mir8gui
+fheoltmovy
+  And The required request parameters are &quot;url_id&quot;                                     # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+tinyurl/zb6mir8gui
+tinyurl/fheoltmovy
+https://tinyurl.ref.o2.co.uk:443/tinyurl/zb6mir8gui
+https://tinyurl.ref.o2.co.uk:443/tinyurl/fheoltmovy
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;get&quot;                       # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+200
+response body of Microservice{&quot;url_id&quot;:&quot;zb6mir8gui&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/zb6mir8gui&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:25Z&quot;}
+200
+response body of Legacy{&quot;url_id&quot;:&quot;fheoltmovy&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/fheoltmovy&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:26Z&quot;}
+  And execute the URL                                                                  # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;200&quot; and validate response parameter &quot;http://google.com&quot; # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to retrieve the details of tinyURL by passing not existed UrlID. # src/test/resources/features/TinyURL/tinyURLgetapi.feature:15
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;                    # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                             # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                                      # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                                        # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;mm63hupzam&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/mm63hupzam&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:29Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;0m7aatofxr&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/0m7aatofxr&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:30Z&quot;}
+  Then execute the URL                                                                            # MyStepdefs.execute_the_url()
+mm63hupzam
+0m7aatofxr
+  And The required request parameters are &quot;url_id&quot;                                                # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+tinyurl/mm63hupzam
+tinyurl/0m7aatofxr
+https://tinyurl.ref.o2.co.uk:443/tinyurl/mm63hupzam
+https://tinyurl.ref.o2.co.uk:443/tinyurl/0m7aatofxr
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;delete&quot;                               # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+status code of microservice is204
+status code of legacy is 204
+  And execute the URL                                                                             # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;204&quot;                                                                # MyStepdefs.iValidateStatusCode(java.lang.String)
+tinyurl/mm63hupzam
+tinyurl/0m7aatofxr
+https://tinyurl.ref.o2.co.uk:443/tinyurl/mm63hupzam
+https://tinyurl.ref.o2.co.uk:443/tinyurl/0m7aatofxr
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;get&quot;                                  # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+404
+response body of Microservice{&quot;error_code&quot;:&quot;tiny_url_not_found&quot;,&quot;error_description&quot;:&quot;Url not found for mm63hupzam&quot;}
+404
+response body of Legacy{&quot;error_code&quot;:&quot;tiny_url_not_found&quot;,&quot;error_description&quot;:&quot;Url not found for 0m7aatofxr&quot;}
+  And execute the URL                                                                             # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;404&quot;                                                                # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: Test condition to Update tinyURL details for the particular urlId    # src/test/resources/features/TinyURL/tinyURLpost.feature:3
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                  # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                           # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                             # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;qzf4pjcpui&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/qzf4pjcpui&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:34Z&quot;}
+status code of Legacy200
+response body of legacy{&quot;url_id&quot;:&quot;vsbpo7blyc&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/vsbpo7blyc&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:35Z&quot;}
+  Then execute the URL                                                                 # MyStepdefs.execute_the_url()
+qzf4pjcpui
+vsbpo7blyc
+  And The required request parameters are &quot;url_id&quot;                                     # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+tinyurl/qzf4pjcpui
+tinyurl/vsbpo7blyc
+https://tinyurl.ref.o2.co.uk:443/tinyurl/qzf4pjcpui
+https://tinyurl.ref.o2.co.uk:443/tinyurl/vsbpo7blyc
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;post&quot;                      # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT2H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;6&quot;                                           # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+status code of Microservice204
+response body of Microservice
+status code of Legacy204
+response body of Legacy
+  And execute the URL                                                                  # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;204&quot;                                                     # MyStepdefs.iValidateStatusCode(java.lang.String)
+tinyurl/qzf4pjcpui
+tinyurl/vsbpo7blyc
+https://tinyurl.ref.o2.co.uk:443/tinyurl/qzf4pjcpui
+https://tinyurl.ref.o2.co.uk:443/tinyurl/vsbpo7blyc
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;get&quot;                       # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+200
+response body of Microservice{&quot;url_id&quot;:&quot;qzf4pjcpui&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/qzf4pjcpui&quot;,&quot;expiry&quot;:&quot;2021-08-13T13:02:36Z&quot;}
+200
+response body of Legacy{&quot;url_id&quot;:&quot;vsbpo7blyc&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/vsbpo7blyc&quot;,&quot;expiry&quot;:&quot;2021-08-13T13:02:37Z&quot;}
+  And execute the URL                                                                  # MyStepdefs.execute_the_url()
+Not matching 
+  And I validate status code &quot;200&quot; and validate response parameter &quot;http://google.com&quot; # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+
+Scenario Outline: Test condition to Update tinyURL details by passing invalid duration. # src/test/resources/features/TinyURL/tinyURLpost.feature:20
+put
+the ip for Microservices https://tinyurl.ref.o2.co.uk:443/
+the ip for Legacy https://tinyurl.ref.o2.co.uk:443/
+  Given I want to execute service of method &quot;put&quot; and in environment &quot;tinyurl&quot;          # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is tinyurl/
+  When the relative url is &quot;tinyurl/&quot;                                                   # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data {
+   &quot;duration&quot;:&quot;PT1H&quot;,
+   &quot;target_url&quot;:&quot;http://google.com&quot;
+}
+  And the given test data is in  &quot;7&quot; and &quot;5&quot;                                            # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://tinyurl.ref.o2.co.uk:443/tinyurl/
+end url for legacy is https://tinyurl.ref.o2.co.uk:443/tinyurl/
+  And the query parameter is passed &quot;null&quot;                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+status code of Microservice200
+response body of Microservice{&quot;url_id&quot;:&quot;1cxqlzdixm&quot;,&quot;target_url&quot;:&quot;http://google.com&quot;,&quot;tiny_url&quot;:&quot;http://i.ref.o2.uk/1cxqlzdixm&quot;,&quot;expiry&quot;:&quot;2021-08-13T12:02:40Z&quot;}
+status code of Legacy200
+response body of legacy
+  Then execute the URL                                                                  # MyStepdefs.execute_the_url()
+1cxqlzdixm
+  And The required request parameters are &quot;url_id&quot;                                      # MyStepdefs.theRequiredRequestParametersAre(java.lang.String)
+      java.lang.IllegalStateException: Cannot invoke the path method because no content-type was present in the response and no default parser has been set.
+
+You can specify a default parser using e.g.:
+RestAssured.defaultParser = Parser.JSON;
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy:406)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl$_path_closure5.doCall(RestAssuredResponseOptionsGroovyImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.findContentType(RestAssuredResponseOptionsGroovyImpl.groovy:496)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.path(RestAssuredResponseOptionsGroovyImpl.groovy:405)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.path(RestAssuredResponseOptionsImpl.java:230)
+	at MyStepdefs.theRequiredRequestParametersAre(MyStepdefs.java:245)
+	at ✽.The required request parameters are &quot;url_id&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/TinyURL/tinyURLpost.feature:27)
+
+  And the relative url is &quot;tinyurl/{url_id}&quot; and method is &quot;post&quot;                       # MyStepdefs.theRelativeUrlIsAndMethodIs(java.lang.String,java.lang.String)
+  And the given test data is in  &quot;7&quot; and &quot;7&quot;                                            # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+  And execute the URL                                                                   # MyStepdefs.execute_the_url()
+  And I validate status code &quot;400&quot;                                                      # MyStepdefs.iValidateStatusCode(java.lang.String)
+
+Scenario Outline: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:5
 get
-the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-identity/v1/identity/EMAIL/{email}/details
-  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;               # MyStepdefs.the_relative_url_is(java.lang.String)
-Test dataharry234@mailinator.com
+the ip for Microservices https://auth.ref.o2.co.uk/
+the ip for Legacy https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                       # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data harry234@mailinator.com
 identity/v1/identity/EMAIL/harry234@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
-  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                          # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
-  And the query parameter is passed &quot;active=false&quot;                                    # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                                  # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
+end url for legacy is https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                            # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 200
-[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
-body[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
-  Then execute the URL                                                                # MyStepdefs.execute_the_url()
-  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901004&quot;                # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
+response body of Microservice[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+200
+response body of Legacy[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
+  Then execute the URL                                                                        # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;200&quot; and validate response parameter &quot;+447800901004&quot;            # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
 
-Scenario: fetch the identity details of a customer by providing the  a invalid email ID for 404 # src/test/resources/features/fetch_Info_By_Email.feature:15
+Scenario Outline: fetch the identity details of a customer by providing the a invalid email ID for 404 # src/test/resources/features/fetch_Info_By_Email.feature:14
 get
-the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                  # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-identity/v1/identity/EMAIL/{email}/details
-  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                         # MyStepdefs.the_relative_url_is(java.lang.String)
-Test dataharry23@mailinator.com
+the ip for Microservices https://auth.ref.o2.co.uk/
+the ip for Legacy https://auth.ref.o2.co.uk/
+  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;                         # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
+The relative URL is identity/v1/identity/EMAIL/{email}/details
+  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;                                # MyStepdefs.the_relative_url_is(java.lang.String)
+Test data harry23@mailinator.com
 identity/v1/identity/EMAIL/harry23@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
-  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                    # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
-  And the query parameter is passed &quot;active=false&quot;                                              # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
+  And the given test data is in  &quot;2&quot; and &quot;4&quot;                                                           # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
+end url for Microservices https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+end url for legacy is https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+  And the query parameter is passed &quot;active=false&quot;                                                     # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 404
-{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
-body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
-  Then execute the URL                                                                          # MyStepdefs.execute_the_url()
-  And I validate status code &quot;404&quot;                                                              # MyStepdefs.iValidateStatusCode(java.lang.String)
+response body of Microservice{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+404
+response body of Legacy{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+  Then execute the URL                                                                                 # MyStepdefs.execute_the_url()
+Matching
+  And I validate status code &quot;404&quot;                                                                     # MyStepdefs.iValidateStatusCode(java.lang.String)
 
-Scenario: fetch the identity details of a customer by providing the  a valid email ID # src/test/resources/features/fetch_Info_By_Email.feature:23
+Scenario Outline: Negative                                                     # src/test/resources/features/fetch_Info_By_Email.feature:22
 get
-the ip is https://auth.ref.o2.co.uk/
-  Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot;        # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-identity/v1/identity/EMAIL/{email}/details
-  When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;               # MyStepdefs.the_relative_url_is(java.lang.String)
-Test dataharry234@mailinator.com
-identity/v1/identity/EMAIL/harry234@mailinator.com/details
-endpointidentity/v1/identity/EMAIL/harry234@mailinator.com/details
-  And the given test data is in  &quot;1&quot; and &quot;4&quot;                                          # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry234@mailinator.com/details?active=false
-  And the query parameter is passed &quot;active=false&quot;                                    # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
-200
-[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
-body[{&quot;uid&quot;:&quot;20000000000000264200&quot;,&quot;customer_contact_id&quot;:&quot;44771234567&quot;,&quot;email&quot;:&quot;harry234@mailinator.com&quot;,&quot;msisdn&quot;:&quot;+447800901004&quot;,&quot;first_name&quot;:&quot;John&quot;,&quot;last_name&quot;:&quot;naik&quot;,&quot;msisdn_verified&quot;:true,&quot;v3_partial_identity&quot;:false,&quot;kba_status&quot;:&quot;AVAILABLE&quot;,&quot;identity_category&quot;:&quot;nc_bss&quot;,&quot;email_only&quot;:false,&quot;has_password&quot;:true,&quot;sqa_available&quot;:true,&quot;email_verified&quot;:false,&quot;demerged&quot;:false,&quot;number_of_security_answer_digits&quot;:5,&quot;former_customer&quot;:false,&quot;security_question_anwser_set&quot;:true}]
-  Then execute the URL                                                                # MyStepdefs.execute_the_url()
-  And I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;                # MyStepdefs.iValidateStatusCodeAndValidateMsisdn(java.lang.String,java.lang.String)
-      java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at MyStepdefs.iValidateStatusCodeAndValidateMsisdn(MyStepdefs.java:121)
-	at ✽.I validate status code &quot;200&quot; and validate msisdn &quot;+447800901009&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:29)
-
-
-Scenario: Email Negative                                                       # src/test/resources/features/fetch_Info_By_Email.feature:31
-get
-the ip is https://auth.ref.o2.co.uk/
+the ip for Microservices https://auth.ref.o2.co.uk/
+the ip for Legacy https://auth.ref.o2.co.uk/
   Given I want to execute service of method &quot;get&quot; and in environment &quot;ref_url&quot; # MyStepdefs.iWantToExecuteServiceOfMethodAndInEnvironment(java.lang.String,java.lang.String)
-identity/v1/identity/EMAIL/{email}/details
+The relative URL is identity/v1/identity/EMAIL/{email}/details
   When the relative url is &quot;identity/v1/identity/EMAIL/{email}/details&quot;        # MyStepdefs.the_relative_url_is(java.lang.String)
-Test dataharry23@mailinator.com
+Test data harry23@mailinator.com
 identity/v1/identity/EMAIL/harry23@mailinator.com/details
 endpointidentity/v1/identity/EMAIL/harry23@mailinator.com/details
   And the given test data is in  &quot;2&quot; and &quot;4&quot;                                   # MyStepdefs.theGivenTestDataIsInAnd(java.lang.String,java.lang.String)
-end urlis https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+end url for Microservices https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
+end url for legacy is https://auth.ref.o2.co.uk/identity/v1/identity/EMAIL/harry23@mailinator.com/details?active=false
   And the query parameter is passed &quot;active=false&quot;                             # MyStepdefs.the_query_parameter_is_passed(java.lang.String)
 404
-{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
-body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+response body of Microservice{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
+404
+response body of Legacy{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;error&quot;:&quot;identity_not_found&quot;}
   Then execute the URL                                                         # MyStepdefs.execute_the_url()
   And I validate status code &quot;405&quot;                                             # MyStepdefs.iValidateStatusCode(java.lang.String)
       java.lang.AssertionError: expected:&lt;404&gt; but was:&lt;405&gt;
@@ -292,8 +1049,8 @@ body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;e
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:647)
 	at org.junit.Assert.assertEquals(Assert.java:633)
-	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:112)
-	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:37)
+	at MyStepdefs.iValidateStatusCode(MyStepdefs.java:176)
+	at ✽.I validate status code &quot;405&quot;(file:///home/deepakravi/IdeaProjects/RestAssured/src/test/resources/features/fetch_Info_By_Email.feature:28)
 
 </pre>
 </span>
@@ -304,23 +1061,13 @@ body{&quot;error_description&quot;:&quot;identity does not exists.&quot;,&quot;e
 <pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-┌───────────────────────────────────────────────────────────────────────────────────┐
-│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
-│ Activate publishing with one of the following:                                    │
-│                                                                                   │
-│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
-│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
-│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
-│ JUnit:                                           @CucumberOptions(publish = true) │
-│                                                                                   │
-│ More information at https://reports.cucumber.io/docs/cucumber-jvm                 │
-│                                                                                   │
-│ Disable this message with one of the following:                                   │
-│                                                                                   │
-│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
-│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
-└───────────────────────────────────────────────────────────────────────────────────┘
-</pre>
+┌──────────────────────────────────────────────────────────────────────────┐
+│ View your Cucumber Report at:                                            │
+│ https://reports.cucumber.io/reports/441a9860-4804-4a0e-8f2e-c665a2bd78b3 │
+│                                                                          │
+│ This report will self-destruct in 24h.                                   │
+│ Keep reports forever: https://reports.cucumber.io/profile                │
+└──────────────────────────────────────────────────────────────────────────┘</pre>
 </span>
 </div>
 </div>
@@ -331,7 +1078,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8</a> at 5 Aug, 2021 5:51:24 PM</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at 13 Aug, 2021 4:33:05 PM</p>
 </div>
 </div>
 </body>
